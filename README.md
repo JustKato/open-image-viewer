@@ -1,5 +1,7 @@
 # Open Image Viewer
 
+![Preview](./preview.gif)
+
 Web component image viewer used on my personal website [danlegt.com](https://danlegt.com/art). Built as a single script that registers the `<open-image-viewer>` custom element.
 
 ## Source layout
