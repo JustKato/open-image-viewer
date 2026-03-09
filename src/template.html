@@ -1,0 +1,90 @@
+<div class="overlay" part="backdrop">
+    <section class="shell window" part="dialog shell" role="dialog" aria-modal="true" aria-label="{{DEFAULT_VIEWER_TITLE}}" tabindex="-1">
+        <header class="titlebar window-bar" part="header titlebar">
+            <div class="title-stack">
+                <div class="window-title" part="title">{{DEFAULT_VIEWER_TITLE}}</div>
+                <div class="title-meta" part="title-meta">Standalone Web Component</div>
+            </div>
+            <div class="title-controls window-buttons">
+                <button class="control-button close-button wbtn wbutton-close" part="control-button close-button" type="button" aria-label="Close viewer">
+                    <span class="control-icon" aria-hidden="true"><svg width="8" height="8" viewBox="0 0 8 8" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" xmlns="http://www.w3.org/2000/svg"><path d="M1 1l6 6M7 1L1 7"/></svg></span>
+                </button>
+            </div>
+        </header>
+        <div class="content window-body" part="content">
+            <div class="layout retro-viewer-layout" part="layout">
+                <div class="stage retro-viewer-stage" part="stage">
+                    <button class="nav-button nav-prev retro-nav button-98" part="nav-button nav-prev" type="button" aria-label="Previous item">&lt;</button>
+                    <img class="stage-media stage-image" part="media media-image" alt="">
+                    <video class="stage-media stage-video is-hidden" part="media media-video" controls playsinline preload="metadata"></video>
+                    <div class="loading is-hidden" part="loading" aria-live="polite">Loading media...</div>
+                    <button class="nav-button nav-next retro-nav button-98" part="nav-button nav-next" type="button" aria-label="Next item">&gt;</button>
+                </div>
+                <div class="resizer retro-panel-resizer" part="resizer" role="separator" aria-orientation="vertical" aria-label="Resize information panel"></div>
+                <aside class="sidebar retro-viewer-info" part="sidebar">
+                    <div class="thumbnail-wrap file-visualizer" part="thumbnail-wrap">
+                        <div class="thumbnail-frame" part="thumbnail-frame">
+                            <img class="thumbnail-image visualizer-preview" part="thumbnail" alt="">
+                        </div>
+                    </div>
+                    <div class="details file-information" part="details">
+                        <div class="item-heading file-names" part="item-heading">
+                            <h2 class="item-title file-title" part="item-title">Untitled</h2>
+                            <p class="item-name file-name" part="item-name">-</p>
+                        </div>
+                        <div class="tablist retro-info-tabs" part="tabs" role="tablist" aria-label="Media source details">
+                            <button class="tab-button retro-info-tab tab-display is-active" part="tab tab-display" type="button" role="tab" aria-selected="true">Preview</button>
+                            <button class="tab-button retro-info-tab tab-raw" part="tab tab-raw" type="button" role="tab" aria-selected="false">Raw</button>
+                        </div>
+                        <div class="meta-grid retro-props" part="meta-grid">
+                            <div class="meta-section retro-props-section" part="meta-section meta-section-primary">
+                                <div class="meta-row retro-props-row meta-row-name" part="meta-row meta-row-name">
+                                    <div class="meta-label retro-prop-key" part="meta-label">File Name</div>
+                                    <p class="meta-value retro-prop-value meta-name" part="meta-value meta-name">-</p>
+                                </div>
+                                <div class="meta-row retro-props-row meta-row-group" part="meta-row meta-row-group">
+                                    <div class="meta-label retro-prop-key" part="meta-label">Album</div>
+                                    <p class="meta-value retro-prop-value meta-group" part="meta-value meta-group">-</p>
+                                </div>
+                                <div class="meta-row retro-props-row meta-row-date" part="meta-row meta-row-date">
+                                    <div class="meta-label retro-prop-key" part="meta-label">Date</div>
+                                    <p class="meta-value retro-prop-value meta-date" part="meta-value meta-date">-</p>
+                                </div>
+                                <div class="meta-row retro-props-row meta-row-views" part="meta-row meta-row-views">
+                                    <div class="meta-label retro-prop-key" part="meta-label">Views</div>
+                                    <p class="meta-value retro-prop-value meta-views" part="meta-value meta-views">0</p>
+                                </div>
+                                <div class="meta-row retro-props-row meta-row-type" part="meta-row meta-row-type">
+                                    <div class="meta-label retro-prop-key" part="meta-label">Type</div>
+                                    <p class="meta-value retro-prop-value meta-type" part="meta-value meta-type">Image</p>
+                                </div>
+                            </div>
+                            <div class="meta-section retro-props-section" part="meta-section meta-section-secondary">
+                                <div class="meta-row retro-props-row meta-row-dimensions" part="meta-row meta-row-dimensions">
+                                    <div class="meta-label retro-prop-key" part="meta-label">Dimensions</div>
+                                    <p class="meta-value retro-prop-value meta-dimensions" part="meta-value meta-dimensions">Unavailable</p>
+                                </div>
+                                <div class="meta-row retro-props-row meta-row-aspect" part="meta-row meta-row-aspect">
+                                    <div class="meta-label retro-prop-key" part="meta-label">Aspect Ratio</div>
+                                    <p class="meta-value retro-prop-value meta-aspect" part="meta-value meta-aspect">Unavailable</p>
+                                </div>
+                                <div class="meta-row retro-props-row meta-row-count" part="meta-row meta-row-count">
+                                    <div class="meta-label retro-prop-key" part="meta-label">Item</div>
+                                    <p class="meta-value retro-prop-value meta-count" part="meta-value meta-count">1 / 1</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="description-block" part="description-block">
+                            <div class="description-label" part="description-label">Comments</div>
+                            <div class="description-text file-desc" part="description">-</div>
+                        </div>
+                        <div class="actions retro-viewer-actions" part="actions">
+                            <slot name="actions"></slot>
+                            <button class="raw-button button-98" part="raw-button" type="button">{{DEFAULT_RAW_LABEL}}</button>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+</div>
