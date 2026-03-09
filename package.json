@@ -1,6 +1,6 @@
 {
   "name": "open-image-viewer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Web component image viewer for danlegt.com/art",
   "scripts": {
     "build": "node build/build.js",

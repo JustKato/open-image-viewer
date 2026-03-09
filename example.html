@@ -65,7 +65,7 @@
       word-break: break-all;
     }
 
-    button {
+    button:not([slot="actions"]) {
       padding: 0.5rem 1rem;
       font: inherit;
       cursor: pointer;
@@ -74,7 +74,7 @@
       background: #fff;
     }
 
-    button:hover {
+    button:not([slot="actions"]):hover {
       background: #f1f5f9;
     }
   </style>

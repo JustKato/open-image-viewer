@@ -430,6 +430,31 @@ textarea {
     max-width: 100%;
 }
 
+/* Slotted action buttons: same exact style as .raw-button (Open original) */
+.actions slot::slotted(button) {
+    min-width: 132px;
+    padding: 10px 14px;
+    border: 1px solid var(--oiv-border-strong);
+    background: var(--oiv-surface-2);
+    color: var(--oiv-text);
+    cursor: pointer;
+    font-weight: 700;
+    border-radius: 999px;
+    font-family: var(--oiv-font-family);
+    font-size: inherit;
+    line-height: inherit;
+    transition: background-color 120ms ease, border-color 120ms ease, color 120ms ease, transform 120ms ease;
+}
+
+.actions slot::slotted(button:hover) {
+    background: var(--oiv-surface-3);
+}
+
+.actions slot::slotted(button:focus-visible) {
+    outline: none;
+    box-shadow: var(--oiv-focus);
+}
+
 .raw-button {
     min-width: 132px;
     padding: 10px 14px;
@@ -816,6 +841,24 @@ textarea {
 :host(:not([theme])) .actions slot::slotted(*),
 :host([theme="win98"]) .actions slot::slotted(*) {
     width: 100%;
+}
+
+:host(:not([theme])) .actions slot::slotted(button),
+:host([theme="win98"]) .actions slot::slotted(button) {
+    width: 100%;
+    border-radius: 0;
+    background: #c0c0c0;
+    border: 1.5px solid;
+    border-color: white black black white;
+    box-shadow: inset -1px -1px 0 #808080, inset 1px 1px 0 #fff;
+    padding: 6px 12px;
+    font-size: 14px;
+}
+
+:host(:not([theme])) .actions slot::slotted(button:active),
+:host([theme="win98"]) .actions slot::slotted(button:active) {
+    box-shadow: inset 1px 1px 0 #808080, inset -1px -1px 0 #ffffff;
+    border-color: black white white black;
 }
 
 :host(:not([theme])) .raw-button,
