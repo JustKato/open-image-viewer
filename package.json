@@ -1,13 +1,17 @@
 {
   "name": "open-image-viewer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Web component image viewer for danlegt.com/art",
   "scripts": {
     "build": "node build/build.js",
     "prepublishOnly": "npm run build",
     "version": "npm run build && git add dist && git add -u"
   },
-  "keywords": ["web-components", "image-viewer", "custom-elements"],
+  "keywords": [
+    "web-components",
+    "image-viewer",
+    "custom-elements"
+  ],
   "author": "",
   "license": "MIT",
   "devDependencies": {
