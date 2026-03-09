@@ -1,17 +1,22 @@
 <!DOCTYPE html>
-<!--
-  Open with a local server for full behavior (images load from the net):
-  npx serve .
-  python -m http.server 8000
-  Then open http://localhost:8000/example.html (or :8000/example.html)
--->
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/pixeloid-sans" rel="stylesheet">
+  <link rel="preload" href="https://fonts.cdnfonts.com/s/66737/PixeloidSans-nR3g1.woff" as="font" type="font/woff" crossorigin>
+
   <title>Open Image Viewer – Example</title>
   <style>
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: system-ui, sans-serif;
       max-width: 720px;
@@ -19,13 +24,18 @@
       padding: 2rem 1rem;
       line-height: 1.5;
     }
-    h1 { margin-top: 0; }
+
+    h1 {
+      margin-top: 0;
+    }
+
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
       gap: 1rem;
       margin: 2rem 0;
     }
+
     .gallery img {
       width: 100%;
       aspect-ratio: 1;
@@ -34,9 +44,11 @@
       cursor: pointer;
       border: 2px solid transparent;
     }
+
     .gallery img:hover {
       border-color: #0f766e;
     }
+
     .log {
       margin-top: 2rem;
       padding: 1rem;
@@ -46,7 +58,13 @@
       max-height: 200px;
       overflow: auto;
     }
-    .log pre { margin: 0; white-space: pre-wrap; word-break: break-all; }
+
+    .log pre {
+      margin: 0;
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+
     button {
       padding: 0.5rem 1rem;
       font: inherit;
@@ -55,9 +73,13 @@
       border: 1px solid #cbd5e1;
       background: #fff;
     }
-    button:hover { background: #f1f5f9; }
+
+    button:hover {
+      background: #f1f5f9;
+    }
   </style>
 </head>
+
 <body>
   <h1>Open Image Viewer – Example</h1>
   <p>
@@ -79,14 +101,11 @@
   </p>
 
   <h2>Event log</h2>
-  <div class="log"><pre id="log">(events will appear here)</pre></div>
+  <div class="log">
+    <pre id="log">(events will appear here)</pre>
+  </div>
 
-  <open-image-viewer
-    id="viewer"
-    viewer-title="Gallery"
-    raw-label="Open original"
-    raw-target="_blank"
-  >
+  <open-image-viewer id="viewer" viewer-title="Gallery" raw-label="Open original" raw-target="_blank">
     <button slot="actions" type="button" id="copyLink">Copy image URL</button>
   </open-image-viewer>
 
@@ -188,4 +207,5 @@
     })();
   </script>
 </body>
+
 </html>

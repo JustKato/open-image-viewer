@@ -1,7 +1,7 @@
 :host {
     --oiv-z-index: 1100;
     --oiv-backdrop: rgba(15, 23, 42, 0.72);
-    --oiv-font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+    --oiv-font-family: "Pixeloid Sans", "PixeloidSans", "PixelOperator", "Pixelify Sans", "VT323", "Press Start 2P", "Silkscreen", "MS Sans Serif", "Microsoft Sans Serif", sans-serif;
     --oiv-dialog-width: min(96vw, 1040px);
     --oiv-dialog-height: min(92vh, 760px);
     --oiv-sidebar-width: 320px;
@@ -54,6 +54,7 @@ textarea {
     justify-content: center;
     padding: clamp(12px, 3vw, 28px);
     background: var(--oiv-backdrop);
+    font-family: var(--oiv-font-family);
 }
 
 .shell {
@@ -68,6 +69,7 @@ textarea {
     border: 1px solid var(--oiv-border-color);
     border-radius: var(--oiv-radius);
     box-shadow: var(--oiv-shadow);
+    font-family: var(--oiv-font-family);
 }
 
 .titlebar {
@@ -115,6 +117,7 @@ textarea {
     background: var(--oiv-surface-2);
     color: var(--oiv-text);
     cursor: pointer;
+    font-weight: 700;
     transition: background-color 120ms ease, border-color 120ms ease, color 120ms ease, transform 120ms ease;
 }
 
@@ -407,7 +410,7 @@ textarea {
     overflow: auto;
     border: 1px solid var(--oiv-border-color);
     border-radius: calc(var(--oiv-radius) * 0.75);
-    background: var(--oiv-surface);
+    background: var(--oiv-surface-2);
     font-size: 0.9rem;
     color: var(--oiv-text);
     white-space: pre-wrap;
@@ -469,7 +472,7 @@ textarea {
 :host(:not([theme])),
 :host([theme="win98"]) {
     --oiv-backdrop: rgba(0, 0, 0, 0.48);
-    --oiv-font-family: "PixeloidSans", "PixelOperator", "MS Sans Serif", "Microsoft Sans Serif", sans-serif;
+    --oiv-font-family: "Pixeloid Sans", "PixeloidSans", "PixelOperator", "Pixelify Sans", "MS Sans Serif", "Microsoft Sans Serif", sans-serif;
     --oiv-radius: 0px;
     --oiv-surface: #c0c0c0;
     --oiv-surface-2: #d4d0c8;
